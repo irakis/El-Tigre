@@ -1,57 +1,27 @@
-/*Hero*/
+/*hero*/
 
-.Hero {
+.hero {
   margin: 0px;
   padding: 0px;
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   object-fit: cover;
   position: relative;
 
   p {
     font-size: 40px;
   }
-
-  h1 {
-    font-size: 75px;
-    margin-top: 96px;
-    margin-bottom: 0px;
-    margin-left: 363px;
-    text-align: left;
-  }
-
-  h1::after {
-    display: block;
-    position: absolute;
-    content: "";
-    margin-top: 46px;
-    margin-left: auto;
-    width: 275px;
-    height: 5px;
-    background-color: $section-title-color;
-  }
-
-  h1:first-of-type::after {
-    display: none;
-  }
-
-  h1:last-of-type {
-    padding: 0px;
-    margin-left: 566px;
-    margin-top: 0px;
-  }
-
 }
 
-.Hero .container {
+.hero .container {
   margin: 0 auto;
   padding: 0px;
   width: 100%;
   height: 1000px;
 }
 
-.Hero .row {
+.hero .row {
   text-align: center;
   width: 100%;
   margin: 0 auto;
@@ -60,54 +30,79 @@
     font-size: $font-header;
     font-size: 36px;
     color: #ffffff;
-    margin: 45px 0 0 396px;
+    margin: 45px 0 0 10%;
     text-align: left;
   }
 
   p {
     font-size: 16px;
-    margin: 0 0 0 396px;
+    margin: 0 0 0 10%;
     text-align: left;
   }
 }
 
+/*Main title*/
 
-.Hero .row.main-title {
-  height: 100%;
+.hero .row.main-title {
+  h1 {
+    text-indent: -40%;
+    margin-top: 20%;
+  }
+  h1::after {
+    display: block;
+    content: "";
+    margin-top: 46px;
+    margin-left: auto;
+    width: 275px;
+    height: 5px;
+    background-color: $section-title-color;
+  }
 
-  i img{
-    width: 30px;
-    height: 30px;
-    background-color: aqua;
+  i {
+    font-size: 50px;
+    color: #ffffff;
   }
 
   p {
     margin: 0;
-    text-align: center;
-    padding: 0;
+    font-size: 34px;
+    text-align: center ;
+    margin-top: 70px;
+    padding: 34px 0;
   }
 }
 
-/*Products*/
+/*Navbar*/
 
-.Products .container .row h1 {
-  font-size: 75px;
-  padding: 96px 0 0 0;
-  text-align: center;
+.navbar ul {
+  margin-top: 45px;
+  li {
+    display: inline;
+    margin-right: 30px;
+
+    a {
+      font-family: $font-header;
+      color: $section-title-color;
+      font-size: 20px;
+      font-weight: $font-semiBold;
+      text-decoration: none;
+    }
+  }
 }
 
-h1::after {
-  display: block;
-  content: "";
-  margin: 46px auto 90px;
-  width: 780px;
-  height: 5px;
-  background-color: $section-title-color;
+/*about us*/
+
+.overlay {
+  background-color: #000000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
-/*About us*/
-
-.About {
+.about {
+  position: relative;
   height: 850px;
   margin: 0px;
   padding: 0px;
@@ -115,17 +110,16 @@ h1::after {
   background-image: url(../images/about-us.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
-  background-size: 100% 100%;
- 
+  background-size: cover;
 }
 
-.About .container {
+.about .container {
   width: 980px;
   height: 850px;
   margin: 0 auto;
+  z-index: 2;
 
   h1 {
-    font-size: 75px;
     padding: 96px 0 0 0;
   }
 
@@ -133,6 +127,7 @@ h1::after {
     font-size: 40px;
     font-style: italic;
     text-align: justify;
+    z-index: 2;
   }
 
   p:last-of-type {
@@ -149,8 +144,39 @@ h1::after {
   }
 }
 
+/*Form*/
+
+.form {
+  padding: 30px;
+  text-align: center;
+  font-family: $font-header;
+  font-size: 36px;
+  font-weight: $font-semiBold;
+
+  input {
+    margin: 40px;
+    height: 80px;
+    width: 550px;
+    border: solid;
+  }
+
+  #message {
+    height: 180px;
+  }
+
+  button {
+    font-size: 30px;
+    font-stretch: expanded;
+    font-weight: bold;
+    background-color: $section-title-color;
+    color: #ffffff;
+    width: 300px;
+    height: 80px;
+  }
+}
+
 /*Footer*/
-.Footer {
+.footer {
   height: 86px;
   display: flex;
 
@@ -161,4 +187,3 @@ h1::after {
     margin: auto;
   }
 }
-
