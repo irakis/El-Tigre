@@ -48,6 +48,7 @@
     text-indent: -40%;
     margin-top: 20%;
   }
+
   h1::after {
     display: block;
     content: "";
@@ -76,6 +77,7 @@
 
 .navbar ul {
   margin-top: 45px;
+
   li {
     display: inline;
     margin-right: 30px;
@@ -117,16 +119,18 @@
   width: 980px;
   height: 850px;
   margin: 0 auto;
-  z-index: 2;
 
   h1 {
     padding: 96px 0 0 0;
+    position: relative;
+    z-index: 2;
   }
 
   p {
     font-size: 40px;
     font-style: italic;
     text-align: justify;
+    position: relative;
     z-index: 2;
   }
 
@@ -172,6 +176,8 @@
     color: #ffffff;
     width: 300px;
     height: 80px;
+    border: none;
+    letter-spacing: 4px;
   }
 }
 
