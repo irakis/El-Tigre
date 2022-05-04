@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
     <section class="hero">
         <div class="container">
@@ -27,13 +26,13 @@
 
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOME</a>
+                            <a class="nav-link" href="#home">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">PRODUCT</a>
+                            <a class="nav-link" href="#products">PRODUCT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
+                            <a class="nav-link" href="#form">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -47,71 +46,6 @@
     </section>
     <section class="products">
         <div class="container">
-            <div class="row">
-                <h1>PRODUCTS</h1>
-            </div>
-            <div class="row">
-                <div class="col-6 product-description">
-                    <h2>Nr Title</h2>
-                    <div>
-                        <p>Description description description description description description description
-                            description
-                            description description description</p>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="parameters">ROASTING: <span>score</span></p>
-                                <p class="parameters">INTENSITY: <span>score</span></p>
-                            </div>
-                            <div class="col-6">
-                                <img src="images/Badge.png" class="badge" alt="badge">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 product"><img src="images/coffee-1.png" alt="coffee-1"></div>
-                <div class="col-6 product"><img src="images/coffee-2.png" alt="coffee-2"></div>
-                <div class="col-6 product-decription">
-                    <h2>Nr Title</h2>
-                    <div>
-                        <p>Description description description description description description description
-                            description
-                            description description description</p>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="parameters">ROASTING: <span>score</span></p>
-                                <p class="parameters">INTENSITY: <span>score</span></p>
-                            </div>
-                            <div class="col-6">
-                                <img src="images/Badge.png" class="badge" alt="badge">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 product-decription">
-                    <h2>Nr Title</h2>
-                    <div>
-                        <p>Description description description description description description description
-                            description
-                            description description description</p>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="parameters">ROASTING: <span>score</span></p>
-                                <p class="parameters">INTENSITY: <span>score</span></p>
-                            </div>
-                            <div class="col-6">
-                                <img src="images/Badge.png" class="badge" alt="badge">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 product"><img src="images/coffee-3.png" alt="coffee-3"></div>
-            </div>
         </div>
     </section>
     <section class="about">
@@ -126,7 +60,7 @@
             <p>Join us!</p>
         </div>
     </section>
-    <section class="form">
+    <section class="form ">
         <div class="container">
             <h1>CONTACT US</h1>
             <form action="/action_page.php">
@@ -143,10 +77,73 @@
     <section class="footer">
         <p>&copy; 2021 EL TIGRE inc.</p>
     </section>
-
+    <script id="template-products" type="text/x-handlebars-template">
+        <div class="row">
+            <h1>PRODUCTS</h1>
+        </div>
+        <div class="row">
+            <div class="col-6 product-description">
+                <h2>01 {{firstProduct.caffeeName}}</h2>
+                <div>
+                    <p>{{firstProduct.caffeDescription}}</p>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="parameters">ROASTING: <span>{{firstProduct.roasting }}</span></p>
+                            <p class="parameters">INTENSITY: <span>{{firstProduct.intensity}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Badge.png" class="badge {{#if firstProduct.mostPopular}}visible{{/if}}" alt="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 product"><img src= "{{firstProduct.picture}}" alt="coffee-1"></div>
+            <div class="col-6 product"><img src= "{{secondProduct.picture}}" alt="coffee-2"></div>
+            <div class="col-6 product-decription">
+                <h2>02 {{secondProduct.caffeeName}}</h2>
+                <div>
+                    <p>{{secondProduct.caffeDescription}}</p>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="parameters">ROASTING: <span>{{secondProduct.roasting}}</span></p>
+                            <p class="parameters">INTENSITY: <span>{{secondProduct.intensity}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Badge.png" class="badge {{#if secondProduct.mostPopular}}visible{{/if}}" alt="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 product-decription">
+                <h2>03 {{thirdProduct.caffeeName}}</h2>
+                <div>
+                    <p>{{thirdProduct.caffeDescription}}</p>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="parameters">ROASTING: <span>{{thirdProduct.roasting}}</span></p>
+                            <p class="parameters">INTENSITY: <span>{{thirdProduct.intensity}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Badge.png" class="badge {{#if thirdProduct.mostPopular}}visible{{/if}}" alt="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 product"><img src="{{thirdProduct.picture}}" alt="coffee-3"></div>
+        </div>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/data.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
 </body>
 
 </html>

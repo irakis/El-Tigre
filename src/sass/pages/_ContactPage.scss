@@ -1,0 +1,32 @@
+/*Form*/
+
+.form {
+  padding: 30px;
+  text-align: center;
+  font-family: $font-header;
+  font-size: 36px;
+  font-weight: $font-semiBold;
+  
+  input {
+    margin: 40px;
+    height: 80px;
+    width: 550px;
+    border: solid;
+  }
+  
+  #message {
+    height: 180px;
+  }
+  
+  button {
+    font-size: 30px;
+    font-stretch: expanded;
+    font-weight: bold;
+    background-color: $section-title-color;
+    color: #ffffff;
+    width: 300px;
+    height: 80px;
+    border: none;
+    letter-spacing: 4px;
+  }
+}

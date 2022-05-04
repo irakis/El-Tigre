@@ -1,1 +1,30 @@
-{} 
+{
+    "data": {
+        "firstProduct": {
+          "caffeeName": "Guatemala Fancy",
+          "caffeDescription": "Guatemala Fancy is a Central American Arabica monograde with a moderate degree of smoking",
+          "roasting": "5/7",
+          "intensity": "4/5",
+          "mostPopular": true,
+          "picture": "images/coffee-1.png"
+        },
+  
+        "secondProduct": {
+          "caffeeName": "Maragojip",
+          "caffeDescription": "Maragojip is a mono-variety Arabica from Nicaragua, washed and presented to a moderate degree of smoking",
+          "roasting": "3/7",
+          "intensity": "2/5",
+          "mostPopular": false,
+          "picture": "images/coffee-2.png"
+        },
+  
+        "thirdProduct": {
+          "caffeeName": "Cuba",
+          "caffeDescription": "Cuba Serrano Lavado is a single variety Arabica from the Caribbean, washed and presented in a medium roasted form.",
+          "roasting": "3/7",
+          "intensity": "4/5",
+          "mostPopular": false,
+          "picture": "images/coffee-3.png"
+        }
+      }
+} 
