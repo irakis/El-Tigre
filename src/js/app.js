@@ -15,6 +15,8 @@ const app = {
     const thisApp = this;
     thisApp.dom = {},
     thisApp.dom.subPages = document.querySelectorAll(select.pages),
+    thisApp.dom.about = document.querySelector(select.about),
+    thisApp.dom.contact = document.querySelector(select.contact),
     thisApp.dom.subPageHome = document.querySelectorAll(select.subPageHome),
     thisApp.dom.subPageContact = document.querySelectorAll(select.subPageContact),
     thisApp.dom.subPageProducts = document.querySelectorAll(select.subPageProducts);
@@ -24,36 +26,30 @@ const app = {
 
     const thisApp = this;
 
-    console.log('argument przekazany do initActivatePage: ', pageId);
-
     for (const page of thisApp.dom.subPages) {
-      console.log(select.pages);
-      console.log(thisApp.dom.subPages);
       page.classList.add(select.hidden);
     }
 
     for (const page of thisApp.dom.subPages) {
-      const attributes = page.getAttribute('class');
+      const pageAttributes = page.getAttribute('class');
 
-      console.log('attributes:', attributes);
-      console.log('obiekt dom', thisApp.dom.subPageHome);
-      console.log('page', page);
+      if (pageAttributes.includes(pageId) && pageId == select.linkPoducts) {
+        page.classList.remove(select.hidden);
 
-      if (attributes.includes(pageId) && pageId == select.linkPoducts) {
-        let elementProducts = thisApp.dom.subPageProducts;
-        console.log(elementProducts);
-        elementProducts.classList.remove(select.hidden);
-      } else if (attributes.includes(pageId) && pageId == select.linkHome) {
-        thisApp.dom.subPageHome.classList.remove(select.hidden);
-      } else if (attributes.includes(pageId) && pageId == select.linkContact) {
-        thisApp.dom.subPageContact.classList.remove(select.hidden);
+      } else if (pageAttributes.includes(select.products.substring(1), 'about') && pageId == select.linkHome) {
+
+        page.classList.remove(select.hidden);
+        thisApp.dom.about.classList.remove(select.hidden);
+
+      } else if (pageAttributes.includes(pageId) && pageId == select.linkContact) {
+        page.classList.remove(select.hidden);
       }
     }
   },
 
   initPageListener: function () {
-    const thisApp = this;
 
+    const thisApp = this;
     const links = document.querySelectorAll(select.links);
 
     for (const link of links) {
