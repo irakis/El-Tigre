@@ -4,10 +4,8 @@ import dataSource from './data.js';
 
 class Products {
   constructor() {
-
     const thisData = dataSource.data;
     this.initPage(thisData);
-
   }
 
   initPage(thisData) {
@@ -15,11 +13,16 @@ class Products {
     const thisProduct = this;
     const generatedHTML = templates.cartProducts(thisData);
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
-    const productsContainer = document.querySelector(select.productsContainer);
-    productsContainer.appendChild(thisProduct.element);
-    const contactSection = document.querySelector(select.contact);
-    contactSection.classList.add(select.hidden);
-    
+    const productsContainer = document.querySelectorAll(select.productsContainer);
+
+    for (const containers of productsContainer) {
+      containers.appendChild(thisProduct.element.cloneNode(true));
+    }
+    const startSections = document.querySelectorAll(select.startingPages);
+
+    for (const section of startSections) {
+      section.classList.add(select.hidden);
+    }
   }
 }
 

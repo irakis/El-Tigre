@@ -12,7 +12,7 @@ h1::after {
   display: block;
   content: "";
   margin: 46px auto 90px;
-  width: 780px;
+  max-width: 780px;
   height: 5px;
   background-color: $section-title-color;
 }
@@ -30,7 +30,7 @@ h1::after {
     display: block;
     content: "";
     margin: 38px 0 0 0 ;
-    width: 110px;
+    max-width: 110px;
     height: 5px;
     background-color: $section-title-color;
   }
@@ -74,4 +74,5 @@ p.parameters {
 
 .badge.visible {
   visibility: visible;
+  box-shadow: none;
 }

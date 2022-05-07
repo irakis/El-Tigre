@@ -1,21 +1,19 @@
 /*Form*/
 
-.form {
+#form {
   padding: 30px;
   text-align: center;
   font-family: $font-header;
   font-size: 36px;
   font-weight: $font-semiBold;
+  margin: 0 30%;
   
-  input {
-    margin: 40px;
-    height: 80px;
-    width: 550px;
+  input, textarea {
+    margin: 40px 0;
+    padding: 10px 0;
+    max-width: 850px;
+    width: 100%;
     border: solid;
-  }
-  
-  #message {
-    height: 180px;
   }
   
   button {
@@ -24,7 +22,7 @@
     font-weight: bold;
     background-color: $section-title-color;
     color: #ffffff;
-    width: 300px;
+    max-width: 300px;
     height: 80px;
     border: none;
     letter-spacing: 4px;

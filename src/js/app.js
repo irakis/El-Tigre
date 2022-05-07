@@ -13,35 +13,23 @@ const app = {
 
   getElement: function () {
     const thisApp = this;
+
     thisApp.dom = {},
     thisApp.dom.subPages = document.querySelectorAll(select.pages),
-    thisApp.dom.about = document.querySelector(select.about),
     thisApp.dom.contact = document.querySelector(select.contact),
-    thisApp.dom.subPageHome = document.querySelectorAll(select.subPageHome),
-    thisApp.dom.subPageContact = document.querySelectorAll(select.subPageContact),
-    thisApp.dom.subPageProducts = document.querySelectorAll(select.subPageProducts);
+    thisApp.dom.home = document.querySelector(select.home),
+    thisApp.dom.product = document.querySelector(select.product);
   },
 
   initActivatePage: function (pageId) {
-
     const thisApp = this;
 
     for (const page of thisApp.dom.subPages) {
       page.classList.add(select.hidden);
     }
-
     for (const page of thisApp.dom.subPages) {
-      const pageAttributes = page.getAttribute('class');
-
-      if (pageAttributes.includes(pageId) && pageId == select.linkPoducts) {
-        page.classList.remove(select.hidden);
-
-      } else if (pageAttributes.includes(select.products.substring(1), 'about') && pageId == select.linkHome) {
-
-        page.classList.remove(select.hidden);
-        thisApp.dom.about.classList.remove(select.hidden);
-
-      } else if (pageAttributes.includes(pageId) && pageId == select.linkContact) {
+      let pageAttributes = page.getAttribute('id');
+      if (pageAttributes == pageId) {
         page.classList.remove(select.hidden);
       }
     }
