@@ -1,11 +1,23 @@
-import { select, templates } from './settings.js';
+import { select, settings, templates } from './settings.js';
 import utils from './utils.js';
-import dataSource from './data.js';
 
 class Products {
   constructor() {
-    const thisData = dataSource.data;
-    this.initPage(thisData);
+    this.getData();
+  }
+
+  getData() {
+    const thisProducts = this;
+    const url = settings.db.url + '/' + settings.db.data;
+  
+    fetch(url)
+      .then(function(Response){
+        return Response.json();
+      })
+      .then(function(data){
+        const serverData = data;
+        thisProducts.initPage(serverData);
+      });
   }
 
   initPage(thisData) {

@@ -5,7 +5,7 @@
           "caffeDescription": "Guatemala Fancy is a Central American Arabica monograde with a moderate degree of smoking",
           "roasting": "5/7",
           "intensity": "4/5",
-          "mostPopular": true,
+          "mostPopular": false,
           "picture": "images/coffee-1.webp"
         },
   
@@ -23,7 +23,7 @@
           "caffeDescription": "Cuba Serrano Lavado is a single variety Arabica from the Caribbean, washed and presented in a medium roasted form.",
           "roasting": "3/7",
           "intensity": "4/5",
-          "mostPopular": false,
+          "mostPopular": true,
           "picture": "images/coffee-3.webp"
         }
       }

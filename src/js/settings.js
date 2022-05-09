@@ -12,6 +12,14 @@ export const select = {
   hidden: 'hidden',
 };
 
+export const settings = {
+  db: {
+    url: '//localhost:3131',
+    data: 'data',
+  }
+};
+
+
 export const templates = {
   cartProducts: Handlebars.compile(document.querySelector(select.cartPoducts).innerHTML),
 };
