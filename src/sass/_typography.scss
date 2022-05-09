@@ -4,9 +4,10 @@ h1 {
   font-size: 75px;
   font-weight: $font-bold;
   font-style: normal;
-  color: $section-title-color ;
+  color: $section-title-color;
   justify-content: center;
   letter-spacing: 8px;
+  @media (max-width: 599px) {font-size: 0.875rem;};
 }
 
 p {

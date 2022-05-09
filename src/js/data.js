@@ -7,7 +7,7 @@ dataSource.data = {
     roasting: '5 / 7',
     intensity: '4 / 5',
     mostPopular: true,
-    picture: 'images/coffee-1.png',
+    picture: 'images/coffee-1.webp',
   },
   
   secondProduct: {
@@ -16,7 +16,7 @@ dataSource.data = {
     roasting: '3 / 7',
     intensity: '2 / 5',
     mostPopular: false,
-    picture: 'images/coffee-2.png',
+    picture: 'images/coffee-2.webp',
   },
   
   thirdProduct: {
@@ -25,7 +25,7 @@ dataSource.data = {
     roasting: '3 / 7',
     intensity: '4 / 5',
     mostPopular: false,
-    picture: 'images/coffee-3.png',
+    picture: 'images/coffee-3.webp',
   },
 };
 

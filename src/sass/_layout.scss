@@ -3,7 +3,7 @@
 .hero {
   margin: 0px;
   padding: 0px;
-  background-image: url(../images/background.png);
+  background-image: url(../images/background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -11,6 +11,12 @@
 
   p {
     font-size: 40px;
+
+    @media (max-width: 599px) {
+      font-size: 0.875rem;
+    }
+
+    ;
   }
 }
 
@@ -32,6 +38,12 @@
     color: #ffffff;
     margin: 45px 0 0 10%;
     text-align: left;
+
+    @media (max-width: 599px) {
+      font-size: 0.875rem;
+    }
+
+    ;
   }
 
   p {
@@ -70,6 +82,12 @@
     text-align: center;
     margin-top: 70px;
     padding: 34px 0;
+
+    @media (max-width: 599px) {
+      font-size: 0.875rem;
+    }
+
+    ;
   }
 }
 
@@ -77,10 +95,17 @@
 
 .navbar ul {
   margin-top: 45px;
+  @media (max-width: 599px) {
+    margin-top: 0px;
+  }
 
   li {
     display: inline;
     margin-right: 30px;
+    @media (max-width: 599px) {
+      padding-top: 15px;
+      display: block;
+    }
 
     a {
       font-family: $font-header;
@@ -88,6 +113,11 @@
       font-size: 20px;
       font-weight: $font-semiBold;
       text-decoration: none;
+
+      @media (max-width: 599px) {
+        font-size: 0.875rem;
+        margin: 48px;
+      }
     }
   }
 }
@@ -109,7 +139,7 @@
   margin: 0px;
   padding: 0px;
   text-align: center;
-  background-image: url(../images/about-us.jpg);
+  background-image: url(../images/about-us.webp);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
@@ -132,6 +162,12 @@
     text-align: justify;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 599px) {
+      font-size: 0.875rem;
+    }
+
+    ;
   }
 
   p:last-of-type {
