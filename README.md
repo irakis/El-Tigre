@@ -1,1 +1,1 @@
-https://git.heroku.com/boiling-lake-24160.git
+https://boiling-lake-24160.herokuapp.com/
