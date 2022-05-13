@@ -14,6 +14,7 @@ export const select = {
 
 export const settings = {
   db: {
+    url: '//localhost:3131',
     data: 'data',
   }
 };

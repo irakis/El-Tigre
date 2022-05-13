@@ -5,9 +5,15 @@
   font-family: $font-header;
   font-size: 36px;
   font-weight: $font-semiBold;
-  margin: 0 30%;
+  margin: 0 auto;
+  label {
+    display: block;
+  }
 
-  @media (max-width: 599px) {font-size: 0.875rem;};
+  @media (max-width: 599px) {
+    font-size: 0.875rem;
+    overflow: hidden;
+  };
 }
 
 input,
@@ -15,11 +21,12 @@ textarea {
   margin: 40px 0;
   padding: 10px 0;
   max-width: 850px;
-  width: 100%;
+  max-width: 100%;
   border: solid;
 }
 
 button {
+  display: block;
   font-size: 30px;
   font-stretch: expanded;
   font-weight: bold;
@@ -29,6 +36,10 @@ button {
   height: 80px;
   border: none;
   letter-spacing: 4px;
+  margin: 0 auto;
 
-  @media (max-width: 599px) {font-size: 0.875rem;};
+  @media (max-width: 599px) {
+    font-size: 0.875rem;
+    overflow: hidden;
+  };
 }
