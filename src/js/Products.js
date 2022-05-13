@@ -8,7 +8,7 @@ class Products {
 
   getData() {
     const thisProducts = this;
-    const url = settings.db.url + '/' + settings.db.data;
+    const url = '/' + settings.db.data;
   
     fetch(url)
       .then(function(Response){
